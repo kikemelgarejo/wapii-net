@@ -1,0 +1,23 @@
+<div class="container">
+    <table id="myTable" class="table">
+        <thead>
+            <tr>
+                <th>Nombre Usuario</th>
+                <th>Cantidad de pubilcaciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @userlist.each do |user| %>
+            <tr>
+                <td><%= user["name"] %></td>
+                <td><%= user["nposts"] %></td>
+
+
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
+<script type="text/javascript">
+    $('#myTable').DataTable();
+</script>
