@@ -1,3 +1,36 @@
-<div>
-    <%= @postsfiltrados %>
-</div>
+<div class="container">
+    <div class="container">
+    <table id="myTable" class="table">
+        <thead>
+            <tr>
+                <th>Autor</th>
+                <th>Título</th>
+                <th>Texto</th>
+                <th>Comentarios</th>
+                <th>Total comentarios</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @postsfiltrados.each do |post| %>
+            <tr>
+                <td><%= post["name"] %></td>
+                <td><%= post["title"] %></td>
+                <td><%= post["body"] %></td>
+                
+                <td>
+                    <ul>
+                        <li><%= post["comentarios"][0]["comentario"] %></li>
+                        <li><%= post["comentarios"][1]["comentario"] %></li>
+                        <li><%= post["comentarios"][2]["comentario"] %></li>
+                    </ul>    
+                </td>
+                <td><%= post["total"] %></td>
+
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+
+<script type="text/javascript">
+    $('#myTable').DataTable();
+</script>
