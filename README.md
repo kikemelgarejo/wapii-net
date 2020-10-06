@@ -3,22 +3,14 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+Things you may want to cover: yarn installed
 
-* Ruby version
+* Ruby version :ruby 2.6.1p33
 
-* System dependencies
+* Rails version: Rails 5.2.4.4
 
-* Configuration
+* Database creation: no required
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Database initialization: no required
 
 * ...
