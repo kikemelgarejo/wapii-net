@@ -1,1 +1,23 @@
-<%= @influencers %>
+<div class="container">
+    <table id="myTable" class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Indice de popularidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @influencers.each do |user| %>
+            <tr>
+                <td><%= user["name"] %></td>
+                <td><%= user["indiceP"] %></td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
+<script type="text/javascript">
+    $('#myTable').DataTable({
+    "lengthMenu": [5]}); // se setean 5 entradas, pero se dejan los demás usuarios para poder filtrar
+                        //según estime el usuario final, por si se requieren medir otras metricas
+</script>
